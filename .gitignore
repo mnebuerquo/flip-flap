@@ -2,3 +2,10 @@
 __pycache__ 
 *sqlite3
 .DS_Store
+
+venv
+staticfiles
+.env
+env
+node_modules
+flip-flap/static/build
