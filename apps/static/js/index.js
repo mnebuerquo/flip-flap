@@ -1,27 +1,22 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// // import { Provider } from 'react-redux';
-// // import { Router, Route, hashHistory, Redirect } from 'react-router';
-// // import { syncHistoryWithStore } from 'react-router-redux';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { Router, Route, hashHistory, Redirect } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
 
-// // import dashboardStore from './stores/dashboardStore';
+import indexStore from './stores/indexStore';
+import ReactIndex from './components/ReactIndex';
 
-// // import DashboardPage from './components/DashboardPage';
+global.reduxStore = indexStore;
 
-// // global.reduxStore = dashboardStore;
-// // global.BASE_STATIC_URL = window.location.host === 'educator-certification.ogapcusa.org' ?
-//     // 'https://s3.amazonaws.com/educator-certification.ogapcusa.org' :
-//     // '/static';
-
-// // const history = syncHistoryWithStore(hashHistory, dashboardStore);
-
-// ReactDOM.render(
-//     // <Provider store={dashboardStore}>
-//         // <Router history={history}>
-//         //     <Redirect from="/" to="dashboard/" />
-//         //     <Route path="dashboard/" component={DashboardPage} />
-//         // </Router>
-//     // </Provider>,
-//     document.getElementById('root'),
-// );
+const history = syncHistoryWithStore(hashHistory, indexStore);
+ReactDOM.render(
+    <Provider store={indexStore}>
+        <Router history={history}>
+            <Redirect from ="/" to="reactIndex/" />
+            <Route path="reactIndex/" component={ReactIndex} />    
+        </Router>,
+    </Provider>,
+    document.getElementById('root'),
+);
 

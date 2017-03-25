@@ -7,7 +7,7 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?http://localhost:3000',
         'webpack/hot/only-dev-server',
-        './apps/static/js/index'
+        './apps/static/js/index.js',
     ],
     output: {
         path: path.resolve('./apps/static/bundles/'),

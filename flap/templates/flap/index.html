@@ -1,1 +1,12 @@
-<div>FLIP FLAPS!</div>
+{% load staticfiles %}
+
+{% block page_content %}
+    <div id="root">
+        INDEX.HTML
+    </div>
+{% endblock page_content %}
+
+
+{% block body_scripts %}
+    <script src="{% static 'js/index.js'%}"></script>
+{% endblock body_scripts %}
