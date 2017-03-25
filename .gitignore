@@ -9,3 +9,5 @@ staticfiles
 env
 node_modules
 flip-flap/static/build
+
+*.log
