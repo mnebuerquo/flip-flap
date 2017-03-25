@@ -10,6 +10,7 @@ import ReactIndex from './components/ReactIndex';
 global.reduxStore = indexStore;
 
 const history = syncHistoryWithStore(hashHistory, indexStore);
+
 ReactDOM.render(
     <Provider store={indexStore}>
         <Router history={history}>
