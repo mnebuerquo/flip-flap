@@ -9,5 +9,8 @@ staticfiles
 env
 node_modules
 flip-flap/static/build
+
 # this was the bundle I got from your config, change this if you move it
 apps/static/bundles/
+
+*.log
