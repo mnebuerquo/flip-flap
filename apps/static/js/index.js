@@ -16,7 +16,7 @@ ReactDOM.render(
         <Router history={history}>
             <Redirect from ="/" to="reactIndex/" />
             <Route path="reactIndex/" component={ReactIndex} />    
-        </Router>,
+        </Router>
     </Provider>,
     document.getElementById('root'),
 );
